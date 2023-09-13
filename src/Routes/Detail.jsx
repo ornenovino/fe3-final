@@ -15,10 +15,20 @@ const Detail = () => {
   return (
     <>
       <h1>Detail Dentist </h1>
-      <p>{dentist?.name}</p>
-      <p>{dentist?.email}</p>
-      <p>{dentist?.phone}</p>
-      <p>{dentist?.website}</p>
+      <table className="w-[1000px] m-auto">
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Website</th>
+        </tr>
+        <tr>
+          <td>{dentist?.name}</td>
+          <td>{dentist?.email}</td>
+          <td>{dentist?.phone}</td>
+          <td>{dentist?.website}</td>
+        </tr>
+      </table>
     </>
   )
 }

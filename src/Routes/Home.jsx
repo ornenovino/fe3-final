@@ -1,15 +1,10 @@
-import { useState, useEffect } from 'react'
+import { useContext } from 'react'
 import Card from '../Components/Card'
+import DataContext from '../Contexts/dataContext'
 
 const Home = () => {
 
-  const [users, setUsers] = useState(null);
-
-  useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/users')
-      .then(response => response.json())
-      .then(json => setUsers(json))
-  }, [])
+  const {data: users} = useContext(DataContext);
 
   return (
     <main className="" >

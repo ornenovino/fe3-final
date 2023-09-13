@@ -37,13 +37,13 @@ const Form = () => {
       <form onSubmit={handleSubmit}>
         <label>
           Full Name:
-          <input type="text" name="name" onChange={(event) => setName(event.target.value)} />
+          <input className="ml-2 rounded-lg bg-blue-300 focus:bg-blue-200" type="text" name="name" onChange={(event) => setName(event.target.value)} />
         </label>
         <label>
           Email:
-          <input type="text" name="email" onChange={(event) => setEmail(event.target.value)} />
+          <input className="ml-2 rounded-lg bg-blue-300 focus:bg-blue-200" type="text" name="email" onChange={(event) => setEmail(event.target.value)} />
         </label>
-        <input type="submit" value="Submit" />
+        <input className="rounded-lg bg-gray-200 hover:bg-gray-500 hover:text-white" type="submit" value="Submit" />
         {error && (<p style={{ color: 'red' }}>{error}</p>)}
       </form>
     </div>

@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  transition: background-color 0.5s ease;
+  transition: color 0.2s ease;
+}
 
 body {
   margin: 0;
@@ -25,8 +29,16 @@ code {
   cursor: pointer;
 }
 
+.favButton:hover {
+  background-color: rgba(136, 136, 136, 0.5);
+  padding: 10px;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+}
+
 h1 {
-  text-align: center;
+  @apply flex text-4xl m-4 font-bold align-middle justify-center;
 }
 
 nav {
@@ -37,7 +49,6 @@ nav {
 }
 
 a {
-  color: #000;
   text-decoration: none;
   margin: 5px;
   cursor: pointer;
@@ -47,21 +58,9 @@ a:hover {
   color: rgb(136, 136, 136);
 }
 
-footer {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  padding: 2rem;
-  position: relative;
-  bottom: 0;
-  width: 90%;
-  height: 40px;
-  margin-top: 2rem;
-}
-
-footer>img {
-  width: 200px;
-  margin: 0;
+.image {
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
 }
 
 footer>p {
@@ -89,12 +88,12 @@ form {
 }
 
 .card:hover {
-  border: 0.5px solid rgb(206, 217, 142);
+  border: 0.5px solid rgb(0, 132, 255);
 }
 
 .card-grid {
   display: flex;
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
   gap: 1rem;
   width: 90vw;
   height: auto;
