@@ -7,7 +7,7 @@ const Contact = () => {
   return (
     <div>
       <h1>Contact</h1>
-      <div className="flex flex-col justify-center items-center m-10">
+      <div className="contact-wrapper">
       <h2>Want to know more?</h2>
       <p>Send us your questions and we will contact you</p>
       </div>

@@ -20,7 +20,7 @@ const Card = ({ user }) => {
   return (
     <div className={`card rounded-lg flex-row gap-2 p-5 ${theme?.cardColor}`}>
       <img src="images/doctor.jpg" alt="" />
-      <Link to={`dentist/${id}`}>{name}</Link>
+      <Link to={`/dentist/${id}`}>{name}</Link>
       <p>{username}</p>
       <button onClick={addFav} className="favButton rounded-lg flex justify-center"><svg height="1rem" width="1rem" version="1.1" id="Capa_1"
         viewBox="0 0 53.867 53.867">

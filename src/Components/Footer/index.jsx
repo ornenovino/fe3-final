@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Footer = () => {
   return (
     <footer className="max-h-20 flex bg-gray-100 justify-between px-40 mt-8 grow">

@@ -7,25 +7,29 @@ import ThemeContext, { themes } from "./Contexts/themeContext";
 import DataContext from "./Contexts/dataContext";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { useState, useEffect, useReducer } from "react";
+import { useEffect, useReducer } from "react";
 
 function App() {
 
-  const [theme, setThemes] = useState(themes.light);
-
   function handleChangeTheme() {
-    theme === themes.light ? setThemes(themes.dark) : setThemes(themes.light)
+    dispatch({type:'change_theme'})
+  }
+
+  function fetchData(){
+    fetch('https://jsonplaceholder.typicode.com/users').then(response =>
+    response.json()
+   ).then(json => {
+    dispatch({type: "set_data", body: json})
+
+   })
   }
 
   function reducer(state, action){
     switch(action.type){
       case "set_data":
-        let data;
-        fetch('https://jsonplaceholder.typicode.com/users')
-        .then(response => response.json())
-        .then(json =>  {data = {data: json}})
-        console.log({data})
-        return data;
+        return {...state, data: action.body}
+      case "change_theme":
+        return {...state, theme: state.theme === themes.light ? themes.dark : themes.light}
       default:
         return state;
     }
@@ -34,7 +38,7 @@ function App() {
   const [state, dispatch] = useReducer(reducer, {theme: themes.light, data: []})
 
   useEffect(() => {
-    dispatch({type: "set_data"})
+    fetchData()
   }, [])
 
   return (

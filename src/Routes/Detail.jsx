@@ -15,7 +15,7 @@ const Detail = () => {
   return (
     <>
       <h1>Detail Dentist </h1>
-      <table className="w-[1000px] m-auto">
+      <table >
         <tr>
           <th>Name</th>
           <th>Email</th>

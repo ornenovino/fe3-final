@@ -38,14 +38,35 @@ code {
 }
 
 h1 {
-  @apply flex text-4xl m-4 font-bold align-middle justify-center;
+  display: flex;
+  font-size: 2rem;
+  margin: 2rem;
+  text-align: middle;
+  font-weight: 500;
+  justify-content: center;
 }
 
 nav {
   display: flex;
+  flex-direction: row;
   width: 80vw;
-  justify-content: flex-start;
-  padding: 1rem;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+  margin: auto;
+}
+
+nav > img {
+  width: 50px;
+  height: 50px;
+}
+
+nav > div {
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
 }
 
 a {
@@ -77,6 +98,16 @@ form {
   margin: 0 auto;
 }
 
+input {
+  margin-left: 2rem;
+  border-radius: 1rem;
+  background-color: #3b82f6 ;
+}
+
+input:focus{
+  background-color: #bfdbfe;
+}
+
 .card {
   display: flex;
   justify-content: space-around;
@@ -104,10 +135,10 @@ form {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-  width: 100%;
+  width: 1000px;
   display: table;
   border: 1px solid #ccc;
-
+  margin: auto;
 }
 
 td,
@@ -126,6 +157,14 @@ tr:nth-child(even) {
   color: white;
 }
 
-.dark>a {
+.dark > a {
   color: white;
+}
+
+.contact-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
 }
