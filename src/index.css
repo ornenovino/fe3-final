@@ -45,6 +45,7 @@ code {
   height: auto;
   flex-wrap: wrap;
   margin: auto;
+  padding: 0 2.5rem;
 }
 
 .card-wrapper {
