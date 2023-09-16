@@ -4,12 +4,12 @@ import DataContext from '../Contexts/dataContext'
 
 const Home = () => {
 
-  const {data: users} = useContext(DataContext);
+  const { data: users } = useContext(DataContext);
 
   return (
-    <main className="" >
+    <main>
       <h1>Home</h1>
-      <div className='card-grid'>
+      <div className="card-grid">
         {users && users.map((user) => (<Card key={user.id} user={user} />))}
       </div>
     </main>

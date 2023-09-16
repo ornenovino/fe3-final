@@ -27,10 +27,10 @@ const Form = () => {
       <form onSubmit={handleSubmit}>
         <label>
           Full Name:
-          <input  type="text" name="name" onChange={(event) => setName(event.target.value)} />
+          <input type="text" name="name" onChange={(event) => setName(event.target.value)} />
         </label>
         <label>
-          Email:  
+          Email:
           <input type="text" name="email" onChange={(event) => setEmail(event.target.value)} />
         </label>
         <button >Submit</button>

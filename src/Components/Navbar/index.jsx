@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
     <div className="page-wrapper" style={{ backgroundColor: theme?.backgroundColor, color: theme?.color }}>
-      <div>
+      <div className="nav-wrapper">
         <nav>
           <img src="DH.ico" alt="" />
           <div>
